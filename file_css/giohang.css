@@ -1,0 +1,13 @@
+
+.giohangbu {
+    position: fixed;
+    z-index: 100000;
+    height: 40vh;
+    width: 400px;
+    right: 0;
+    top: 0;
+    background: #fff;
+    overflow-y: scroll;
+    background-color: aqua;
+    border-radius: 10px ;
+}

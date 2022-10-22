@@ -1,0 +1,73 @@
+
+  <!-- tạo phần phân trang trên  -->
+  <nav class="breadcrumb" style="width: 100% !important; background-color: #fff; padding-left: 0;">
+    <a class="breadcrumb-item" href="#!" style="font-size: 13px;">Trang chủ</a>
+    <a class="breadcrumb-item" href="#" style="font-size: 13px;" > Quần </a>
+  </nav>
+  <!-- end  -->
+
+  <!-- image_novemove_ao -->
+  <div class="ao_nam" style="padding-bottom: 30px;">
+        <a href="">
+            <img style="width:100% ; height:100% ;" src="/Image/qu_n_nam_2_1_.jpg">
+        </a>
+  </div>
+  <!-- end -->
+
+  
+  <!-- vertical-nav left and Item-->
+<div class="vernav_item">
+        <div class="row" style="margin: 0; padding: 0;">
+            <div class="col-lg-3 col-md-4 menu_left" ng-include = "'menu.html'" style="padding-right:40px;">
+                
+            </div>
+
+            <!-- ITEM-SẢN PHẨM -->
+                <div class="col-lg-9 col-md-8 col-sm-4" style="padding-right: 0;">
+                    <div class="row">
+                            <div class="col-xs-6 col-md-6 col-lg-4" ng-repeat ='h1 in arr | limitTo : value : begin | filter : search : false'>
+                                <div class="card text-start border-0">
+                                  <div class="hover"> 
+                                    <img class="card-img-top" src = {{h1.image}} alt="Title">
+                                    <div class="buyhover">
+                                       <a href="#!chitietao/{{h1.id}}"><p>MUA NGAY</p></a>
+                                    </div>
+                                  </div>
+                                  <a href="" class="items" style="text-decoration:none ; color: black;" ><div class="card-body">
+                                    <h4 class="card-title" style="opacity: 0.8 !important;">{{h1.name}}</h4>
+                                    <p class="card-text">{{h1.price | number : 0}} <sup>đ</sup></p>
+                                  </div></a>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- PHÂN TRANG -->
+                    <div class="row " style="padding-top: 20px; padding-bottom: 100px;" >
+                      <nav aria-label="">
+                        <ul class="pagination">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                          </li>
+                          <li  ng-click = "next1() ;">
+                          <a type="submit" class="page-link">1</a>  
+           
+                        </li>
+                        <li  ng-click = "next2() ;">
+                          <a type="submit" class="page-link ">2</a>  
+
+                        </li >
+                          <li class="page-item" ng-click = "next3() ;"><a class="page-link">3</a></li>
+                          <li class="page-item" ng-click = 'next()'>
+                            <a class="page-link">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                  </div>
+                    <!-- END -->
+                </div>
+                
+            <!-- END -->
+        </div>
+    </div>
+    <!-- End vertical_nav_left and items -->
+
+
